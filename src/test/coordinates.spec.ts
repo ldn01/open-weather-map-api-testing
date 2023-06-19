@@ -24,14 +24,14 @@ it('should return 400 when an invalid latitude', async () => {
   assertBadRequest(response, 'wrong latitude')
 })
 
-it('should return 400 when an no lon param is used', async () => {
+it('should return 400 when no lon param is used', async () => {
   const response = await makeRequestWithParamsAsString(
     `lat=44.34&appid=${appId}`,
   )
   assertBadRequest(response, 'Nothing to geocode')
 })
 
-it('should return 400 when an no lat param is used', async () => {
+it('should return 400 when no lat param is used', async () => {
   const response = await makeRequestWithParamsAsString(
     `lon=10.99&appid=${appId}`,
   )

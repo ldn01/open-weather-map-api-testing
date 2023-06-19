@@ -8,14 +8,14 @@ it('should return 401 when an invalid auth token is used', async () => {
   assertInvalidAuthToken(response)
 })
 
-it('should return 401 when an no auth token is used', async () => {
+it('should return 401 when no auth token is used', async () => {
   const response = await makeRequestWithParamsAsString(
     'lat=44.34&lon=10.99&appid=',
   )
   assertInvalidAuthToken(response)
 })
 
-it('should return 401 when an no appid param is used', async () => {
+it('should return 401 when no appid param is used', async () => {
   const response = await makeRequestWithParamsAsString('lat=44.34&lon=10.99')
   assertInvalidAuthToken(response)
 })
